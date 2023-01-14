@@ -1,0 +1,96 @@
+{
+    "name": "MdiskSearchBOT-TC",
+    "description": "This is Inline Channel Messages Search Bot",
+    "keywords": [
+        "telegram",
+        "channel",
+        "messages",
+        "search",
+        "bot"
+    ],
+    "repository": "https://github.com/LazyDeveloperr/MdiskSearchBOTTC",
+    "website": "https://telegram.dog/LazyDeveloperr",
+    "success_url": "https://t.me/LazyDeveloperr",
+    "env": {
+        "API_ID": {
+            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
+        },
+        "USER_SESSION_STRING": {
+            "description": "Telethon - Get this from @StringSessionGen_Bot"
+        },
+        "BOT_SESSION_NAME": {
+            "description": "Any Session Name for Bot."
+        },
+        "BOT_TOKEN": {
+            "description": "Get this from @BotFather"
+        },
+        "CHANNEL_ID":{
+            "description": "Channel id where your posts are stored",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "Your Bot Username which you sent to @BotFather (Without [@])"
+        },
+        "RESULTS_COUNT":{
+            "description": "Count of the number of Results",
+            "required": false,
+            "value": "20"
+        },
+        "AUTO_DELETE_TIME":{
+            "description": "Auto deletion time in seconds",
+            "required": false,
+            "value": "300"
+        },
+        "FORCE_SUB":{
+            "description": "Set to true to force a new subscription",
+            "required": false,
+            "value": "False"
+        },
+        "HELP_TEXT": {
+            "description": "Type Anything You Want"    
+        },
+        "ABOUT_TEXT": {
+            "description": "Type Anything You Want"
+        },    
+        "MDISK_API":{
+            "description": "Mdisk API",
+            "required": true,
+            "value": ""
+        },    
+        "BOT_OWNER":{
+            "description": "Admin id . Get from miss rose bot",
+            "required": true
+        },
+        "BACKUP_CHANNEL":{
+            "description": "username of your backup channel (Without [@])",
+            "required": false
+        },
+        "START_PHOTO":{
+            "description": "Bot start up picture. Get it from telegraph bot",
+            "required": true
+        },
+        "UPDATES_CHANNEL":{
+            "description": "Id of update channel",
+            "required": true
+        },
+        "UPDATES_CHANNEL_USERNAME":{
+            "description": "username of update channel (Without [@])",
+            "required": true
+        }
+
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
